@@ -1,16 +1,16 @@
-## ## Sales-Forecasting
+### Sales-Forecasting
 
-## ## Overview
+### Overview
 This project focuses on **predicting future sales** based on historical data using a variety of **time series forecasting** and **machine learning** techniques. It involves crafting time-based features, handling temporal validation properly, and experimenting with advanced models like **Random Forest**, **XGBoost**, and **Exponential Smoothing**.
 
-## ## Dataset
+### Dataset
 - **Source**: [Kaggle - Walmart Sales Forecasting](https://www.kaggle.com/datasets/aslanahmedov/walmart-sales-forecast)
 - **Files Used**:
   - `train.csv`: Weekly sales data by store and department
   - `features.csv`: Additional data like temperature, fuel price, etc.
   - `stores.csv`: Store type and size information
 
-## ## Objectives
+### Objectives
 1. Merge, clean, and engineer features from the dataset.
 2. Create time-based and lag features (e.g. `Month`, `Lag_1`, `Lag_52`, etc.)
 3. Apply regression models like **Random Forest** and **XGBoost**.
@@ -19,7 +19,7 @@ This project focuses on **predicting future sales** based on historical data usi
 6. Forecast using **Exponential Smoothing** for one store-department pair.
 7. Visualize actual vs predicted sales.
 
-## ## Tools & Libraries
+### Tools & Libraries
 - Python
 - pandas, numpy
 - matplotlib, seaborn
@@ -27,7 +27,7 @@ This project focuses on **predicting future sales** based on historical data usi
 - xgboost
 - statsmodels (for time series)
 
-## ## 📊 Key Steps & Results
+### Key Steps & Results
 ## Feature Engineering
 - Extracted **time-based features** from the `Date` column:
   - `Year`, `Month`, `Week`, `Day of Week`
@@ -44,16 +44,16 @@ This project focuses on **predicting future sales** based on historical data usi
 ## Time-Aware Cross-Validation (5 Folds)
 Used `TimeSeriesSplit` from scikit-learn to ensure validation respects the time-order of data:
 - **Fold 1**:
-  - 📉 WMAE: `2703.55`
+  -  WMAE: `2703.55`
 - **Fold 2**:
-  - 📉 WMAE: `2156.53`
+  -  WMAE: `2156.53`
 - **Fold 3**:
-  - 📉 WMAE: `2297.09`
+  -  WMAE: `2297.09`
 - **Fold 4**:
-  - 📉 WMAE: `1582.88`
+  -  WMAE: `1582.88`
 - **Fold 5**:
-  - 📉 WMAE: `1456.64`
-- **📊 Average WMAE across folds**: `2039.34`
+  -  WMAE: `1456.64`
+- ** Average WMAE across folds**: `2039.34`
 
 ## XGBoost
 Applied `XGBRegressor` as an advanced boosting model:
